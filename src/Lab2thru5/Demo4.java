@@ -1,4 +1,4 @@
-package Lab2;
+package Lab2thru5;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -8,14 +8,14 @@ package Lab2;
 
 
 
-import Lab2.Employee2;
+import Lab2thru5.Employee2;
 import java.util.*;
 
 /**
  *
  * @author sendres1
  */
-public class Demo2 {
+public class Demo4 {
     public static void main(String[] args) {
         String employeeVar;
         
@@ -25,17 +25,38 @@ public class Demo2 {
         Employee2 e4 = new Employee2("Lau", "Allan", "444-333-3333");
         
         //empList [];
-        List empList = new ArrayList();
+        List<Employee2> empList = new ArrayList<Employee2>();
+        
+        
         empList.add(e1);
         empList.add(e2);
         empList.add(e3);
         empList.add(e4);
         
-        // this doesn't work
-        //System.out.println("last entry" + empList.lastIndexOf(e4));
+        
+        
+        // use set to remove the duplicates
+        
+        empList.set(0, e1.toString());
+        
+        //
+        
+        
+             
+     
        
     // print out size of list
         System.out.println("size of list " + empList.size());
+        
+        
+           // lenght doesn't work, it is 26
+        for(int i = 0; i < empList.size(); i++){
+            System.out.println("employeeVar tostring()" + employeeVar); 
+             }
+     
+        
+        
+        
     
         // 2nd entry to variable
         // need to cast AND use the toString

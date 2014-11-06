@@ -1,4 +1,4 @@
-package Lab2;
+package Lab2thru5;
 
 
 import java.util.Objects;
