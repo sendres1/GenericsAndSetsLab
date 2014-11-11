@@ -18,6 +18,7 @@ public class Demo1 {
         Employee2 e1 = new Employee2("Jones", "Sally", "333-333-3333");
         Employee2 e2 = new Employee2("Jones", "Sally", "333-333-3333");
         
+        System.out.println("e1 tostring()" + e1);  // this will do the same
         System.out.println("e1 tostring()" + e1.toString());   
         
     // default equals method doesn't work

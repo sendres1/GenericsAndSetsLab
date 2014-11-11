@@ -1,21 +1,23 @@
-package Lab2thru5;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 
+package Lab2thru5;
 
-
-import Lab2thru5.Employee2;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 /**
  *
  * @author sendres1
  */
-public class Demo4 {
+
+public class Demo5 {
     public static void main(String[] args) {
         String employeeVar;
         
@@ -24,10 +26,34 @@ public class Demo4 {
         Employee2 e3 = new Employee2("Hill", "Mary", "333-333-3333");
         Employee2 e4 = new Employee2("Lau", "Allan", "444-333-3333");
         
-        //empList [];
-        Set<Employee2> removeDupes = new HashSet<>(Employee2);
+        //use sssn as key
+        Map<String,Employee2> empMap = new HashMap<>();
  //       Set<Employee2> removeDupes = new HashSet<>(Employee2);
-        empList = new ArrayList<>(removeDupes);
+        
+        empMap.put("333-333-3333", e1);
+        // e2 replaces e1 at this key
+        empMap.put(e2.getSsn(), e2);
+        empMap.put(e2.getSsn(), e3);
+        empMap.put(e2.getSsn(), e4);
+        
+        Employee e = empMap.get("444-333-3333");
+        System.out.println("e1" + e1);
+        
+        
+        Set<String> keys = employeeMap.keySet();
+        
+        for(String key:keys){
+            Employee emp = employeeMap.get(key);
+            System.out.println(emp);
+        }
+        
+      Collection<Employee> values = employeeMap.values();
+      List<Employee> list = new ArrayList<>(values);
+      for(int i=0 ; i< list.size(); i++){
+          Employee emp = list.get(i);
+      /// or use new styp format
+      // two ways to retieve map or keys
+      }
         
         
       
@@ -81,57 +107,9 @@ public class Demo4 {
             System.out.println("not equal");
         
         
-//        /// List shoppingList = new ArrayList() use cast
-//        // HashSet<>() doesn't allow duplicates or entry order
-//        
-////  //      List <String>shoppingList = new ArrayList<>();  /// dont use 10
-////        shoppingList.add("cookies");
-////         shoppingList.add("ice cream");
-////          shoppingList.add("cookies");
-////          
-////      //    shoppingList.remove("cookies");
-////          shoppingList.add(1, "done");
-////      //   shoppingList.addAll(args);
-//          
-//          
-//      //    String r = shoppingList.get(1); // not a string but an generi object
-//          String r = shoppingList.get(1); // need to cast
-//       // or 
-//        //    String r = (String)shoppingList.get(1).toString(); // not the best
-//          
-//          System.out.println("  ");
-//          // legacy technique  pre jdk 5
-//          for (int i = 0; i<shoppingList.size(); i++){
-//              String item = shoppingList.get(i);
-//              System.out.println(item);
-//          }
-//          
-//          // new way  only jdk 5 and above
-//          // for each in this list
-//          // need this if not using <>
-//          for(Object obj : shoppingList){
-//              String item = (String)obj;
-//              System.out.println(item);
-//              
-//          }
-//           // new way  only jdk 5 and above
-          // for each in this list
-          // this will only work the the <> operator
-//          for(String item : shoppingList){
-//             System.out.println(item);
-//              
-//          }
-//          
-//          List<Employee> shoppingList2 = new ArrayList<>();
-//          shoppingList2.add(e1);
-//          shoppingList2.add(e1);
-//          
-//          Set<Employee> removeDupes = new HashSet<>(shoppingList2);
-//       //   shoppingList = new.......
-          //move
-         // one more line here 
-        
         
     }
     
 }
+
+

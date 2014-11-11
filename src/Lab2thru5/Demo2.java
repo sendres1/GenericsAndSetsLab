@@ -20,7 +20,7 @@ public class Demo2 {
         String employeeVar;
         
         Employee2 e1 = new Employee2("Jones", "Sally", "111-333-3333");
-        Employee2 e2 = new Employee2("Jones", "Sally", "111-333-3333");
+        Employee2 e2 = new Employee2("Jones", "Shelly", "111-333-3333");
         Employee2 e3 = new Employee2("Hill", "Mary", "333-333-3333");
         Employee2 e4 = new Employee2("Lau", "Allan", "444-333-3333");
         
@@ -50,6 +50,9 @@ public class Demo2 {
             System.out.println("employeeVar tostring()" + employeeVar); 
              }
         
+        Employee2 e5 = (Employee2)empList.get(1);
+        System.out.println("e5" + e5);
+        
         boolean equals = empList.equals(e4);
         System.out.println("equals " + equals);
         
@@ -58,6 +61,9 @@ public class Demo2 {
        // empList.set(2 e4);
         for(int i = 0; i < empList.size(); i++){
             System.out.println("employeeVar tostring()" + employeeVar); 
+           
+            System.out.println(empList.get(i));  // don't need to cast as print 
+            // uses the to-string 
              }
         
         
@@ -68,6 +74,8 @@ public class Demo2 {
         else
             System.out.println("not equal");
         
+        empList.remove(e2);
+        empList.set(2, empList);
         
 //        /// List shoppingList = new ArrayList() use cast
 //        // HashSet<>() doesn't allow duplicates or entry order

@@ -26,7 +26,7 @@ public class Demo3 {
         
         //empList [];
         List<Employee2> empList = new ArrayList<Employee2>();
-        
+        //generify list, can only be of type employee
         
         empList.add(e1);
         empList.add(e2);
@@ -51,6 +51,10 @@ public class Demo3 {
         for(int i = 0; i < empList.size(); i++){
             System.out.println("employeeVar tostring()" + employeeVar); 
              }
+        
+        //for(Emp empList: empList){
+        //    
+        //}
         
         boolean equals = empList.equals(e4);
         System.out.println("equals " + equals);
